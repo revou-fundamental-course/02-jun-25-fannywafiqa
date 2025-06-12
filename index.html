@@ -3,63 +3,328 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio Website - Fanny Wafiq Azizah</title>
+    <title>SMK Negeri 7 Semarang</title>
 
-    <!-- CSS External -->
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/img/logo-stemba.png" />
+
+    <!-- CSS -->
     <link rel="stylesheet" href="css/style.css" />
+
+    <!-- AOS -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"
+      rel="stylesheet"
+    />
   </head>
 
   <body>
-    <!-- Header Content -->
-    <header class="main-header">
-      <!-- Logo Website -->
-      <div class="main-logo"></div>
-
-      <!-- Navbar -->
-      <nav>
-        <a href="#home">Home</a>
-        <a href="#our-profile">Our Profile</a>
-        <a href="#message-us">Message Us</a>
-      </nav>
+    <header class="navbar">
+      <!-- navbar -->
+      <div class="logo">
+        <img src="assets/img/logo-stemba.png" alt="Logo" />
+      </div>
+      <div class="menu-toggle" onclick="toggleMenu()">☰</div>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#profile">Tentang</a></li>
+        <li><a href="#keahlian">Konsentrasi Keahlian</a></li>
+        <li><a href="#contact">Hubungi Kami</a></li>
+      </ul>
+      <!-- navbar end -->
     </header>
 
-    <hr />
-
-    <!-- Main Content -->
     <main>
-      <!-- Home Section -->
-      <section id="home">
-        <h1>Hi there, Welcome to my portfolio website!</h1>
-        <p>
-          My name is Fanny Wafiq Azizah, and I am a Junior Frontend Developer.
-        </p>
-
-        <!-- Banner Section -->
-        <div class="banner-img"></div>
+      <!-- Home -->
+      <section id="home" class="home" data-aos="fade-down">
+        <div class="carousel-container">
+          <div class="carousel">
+            <div class="slides">
+              <img
+                src="assets/img/carousel2.webp"
+                class="slide active"
+                alt="Slide 1"
+              />
+              <img
+                src="assets/img/carousel1.webp"
+                class="slide"
+                alt="Slide 2"
+              />
+              <img
+                src="assets/img/carousel3.webp"
+                class="slide"
+                alt="Slide 3"
+              />
+              <img
+                src="assets/img/carousel4.webp"
+                class="slide"
+                alt="Slide 4"
+              />
+              <img
+                src="assets/img/carousel5.webp"
+                class="slide"
+                alt="Slide 5"
+              />
+            </div>
+          </div>
+          <div class="overlay">
+            <div class="content">
+              <h1 data-aos="zoom-in-up" data-aos-delay="400">
+                Halo <span id="userName">Pengunjung</span>, <br />
+                Selamat Datang di SMK Negeri 7 Semarang
+              </h1>
+              <p data-aos="zoom-in-up" data-aos-delay="600">
+                SMK Negeri 7 Semarang adalah sekolah menengah kejuruan yang
+                berada di Semarang, Jawa Tengah, Indonesia.
+              </p>
+              <br />
+              <a href="#contact" class="btn" data-aos="zoom-in-up"
+                >Hubungi Kami</a
+              >
+            </div>
+          </div>
+          <div class="dots">
+            <span class="dot active" onclick="showSlide(0)"></span>
+            <span class="dot" onclick="showSlide(1)"></span>
+            <span class="dot" onclick="showSlide(2)"></span>
+            <span class="dot" onclick="showSlide(3)"></span>
+            <span class="dot" onclick="showSlide(4)"></span>
+          </div>
+        </div>
       </section>
+      <!-- end home -->
 
-      <hr />
+      <!-- PROFILE -->
+      <section>
+        <div class="profile" id="profile">
+          <h2 data-aos="fade-up">TENTANG</h2>
+          <div class="profile-card" data-aos="zoom-in-up" data-aos-delay="200">
+            <h3>PROFIL SMKN 7 SEMARANG</h3>
+            <p>
+              SMK Negeri 7 Semarang
+              <mark
+                >diresmikan pada tanggal 7 Juni 1971 oleh Presiden Republik
+                Indonesia - Suharto</mark
+              >, dengan nama Proyek Perintis Sekolah Teknologi Menengah
+              Pembangunan Semarang dengan lama pendidikan 4 (empat) tahun.
+            </p>
 
-      <!-- Our Profile Section -->
-      <section id="our-profile">
-        <h1>Our Profile</h1>
-        <p>We are a team of passionate developers.</p>
+            <!-- video -->
+            <div class="video-wrapper">
+              <iframe
+                src="https://www.youtube.com/embed/9VNvxo9Ze2Q?si=dZe9pfbeaqD-xJmC&autoplay=1"
+                title="YouTube video player"
+                frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen
+              >
+              </iframe>
+            </div>
+          </div>
+          <!-- END PROFILE -->
+
+          <!-- JURUSAN -->
+          <div class="jurusan" id="keahlian">
+            <h2>JURUSAN</h2>
+            <div class="profile-card">
+              <div class="jurusan-list">
+                <!-- SIJA -->
+                <div class="jurusan-menu" data-aos="zoom-in">
+                  <img src="assets/img/carousel1.webp" alt="sija" />
+                  <div class="jurusan-right">
+                    <p>
+                      <b>SISTEM INFORMASI JARINGAN DAN APLIKASI</b>
+                      (SIJA)
+                    </p>
+                    <br />
+                    <p>
+                      Jurusan yang berfokus pada
+                      <mark
+                        >pembuatan perangkat lunak dan pengembangan gim</mark
+                      >
+                      berbasis komputer maupun mobile.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- KJIJ -->
+                <div class="jurusan-menu" data-aos="zoom-in">
+                  <img src="assets/img/kjij.webp" alt="kjij" />
+                  <div class="jurusan-right">
+                    <p>
+                      <b>KONSTRUKSI JALAN IRIGASI DAN JEMBATAN</b>
+                      (KJIJ)
+                    </p>
+                    <br />
+                    <p>
+                      Jurusan ini berfokus pada
+                      <mark>pembangunan infrastruktur sipil</mark>
+                      seperti jalan, jembatan, dan gedung bertingkat.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- TME -->
+                <div class="jurusan-menu" data-aos="zoom-in">
+                  <img src="assets/img/tme.webp" alt="tme" />
+                  <div class="jurusan-right">
+                    <p>
+                      <b>TEKNIK MEKATRONIKA</b>
+                      (TME)
+                    </p>
+                    <br />
+                    <p>
+                      <mark
+                        >Menggabungkan teknik mekanika, elektronika, dan
+                        informatika</mark
+                      >
+                      dalam sistem kendali otomatis.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- TKR -->
+                <div class="jurusan-menu" data-aos="zoom-in">
+                  <img src="assets/img/tkr.webp" alt="tkr" />
+                  <div class="jurusan-right">
+                    <p>
+                      <b>TEKNIK KENDARAAN RINGAN</b>
+                      (TKR)
+                    </p>
+                    <br />
+                    <p>
+                      Jurusan ini mengajarkan tentang
+                      <mark>sistem dan teknologi kendaraan bermotor,</mark>
+                      termasuk perbaikan dan perawatan mesin.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- KGS -->
+                <div class="jurusan-menu" data-aos="zoom-in">
+                  <img src="assets/img/kgs.webp" alt="kgs" />
+                  <div class="jurusan-right">
+                    <p>
+                      <b>KONSTRUKSI GEDUNG DAN SANITASI</b>
+                      (KGS)
+                    </p>
+                    <br />
+                    <p>
+                      Jurusan ini mempelajari
+                      <mark
+                        >teknik perencanaan, pembangunan, dan perawatan
+                        bangunan</mark
+                      >
+                      perumahan serta fasilitas umum.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- TEK -->
+                <div class="jurusan-menu" data-aos="zoom-in">
+                  <img src="assets/img/tek.webp" alt="tek" />
+                  <div class="jurusan-right">
+                    <p>
+                      <b>TEKNIK ELEKTRONIKA KOMUNIKASI</b>
+                      (TEK)
+                    </p>
+                    <br />
+                    <p>
+                      Mempelajari
+                      <mark>sistem komunikasi elektronik,</mark> termasuk
+                      perangkat telekomunikasi, jaringan komputer, dan teknologi
+                      transmisi data.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- TITL -->
+                <div class="jurusan-menu" data-aos="zoom-in">
+                  <img src="assets/img/titl.webp" alt="titl" />
+                  <div class="jurusan-right">
+                    <p>
+                      <b>TEKNIK INSTALASI TENAGA LISTRIK</b>
+                      (TITL)
+                    </p>
+                    <br />
+                    <p>
+                      Jurusan ini
+                      <mark
+                        >mengajarkan instalasi, perawatan, dan perbaikan</mark
+                      >
+                      sistem kelistrikan.
+                    </p>
+                  </div>
+                </div>
+
+                <!-- TFLM -->
+                <div class="jurusan-menu" data-aos="zoom-in">
+                  <img src="assets/img/tflm.webp" alt="tflm" />
+                  <div class="jurusan-right">
+                    <p>
+                      <b>TEKNIK FABRIKASI LOGAM DAN MANUFAKTUR</b>
+                      (TFLM)
+                    </p>
+                    <br />
+                    <p>
+                      Jurusan ini mengajarkan
+                      <mark>keterampilan dalam teknik pengelasan</mark> dan
+                      fabrikasi logam untuk industri.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
+      <!-- END JURUSAN -->
 
-      <hr />
+      <!-- Form -->
+      <section id="contact" data-aos="fade-up">
+        <div class="section">
+          <h2>Message Us</h2>
+          <div class="contact-wrapper">
+            <form id="contactForm">
+              <label for="name">Nama:</label>
+              <input type="text" id="name" required />
 
-      <!-- Message Us Section -->
-      <section id="message-us">
-        <h1>Message Us</h1>
-        <p>If you have any questions, feel free to reach out!</p>
+              <label for="dob">Tanggal Lahir:</label>
+              <input type="date" id="dob" required />
 
-        <form></form>
+              <label>Jenis Kelamin:</label>
+              <label>
+                <input type="radio" name="gender" value="Laki-Laki" required />
+                Laki-Laki</label
+              >
+              <label
+                ><input type="radio" name="gender" value="Perempuan" />
+                Perempuan</label
+              >
+
+              <label for="message">Pesan:</label>
+              <textarea id="message" required></textarea>
+
+              <!-- button -->
+              <button type="submit">Submit</button>
+            </form>
+            <!-- end form -->
+
+            <div id="formResult" class="form-result"></div>
+          </div>
+        </div>
       </section>
     </main>
 
-    <!-- Footer Content -->
-    <footer>
-      <p>&copy; 2025 Fanny Azizah. All rights reserved.</p>
-    </footer>
+    <footer>Created By Fanny Azizah</footer>
+
+    <!-- script AOS -->
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init();
+    </script>
+
+    <!-- scipt js -->
+    <script src="js/script.js"></script>
   </body>
 </html>
